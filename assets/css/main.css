@@ -1417,3 +1417,76 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Custom Overrides & Fixes
+--------------------------------------------------------------*/
+
+/* Skills section - clean up old progress bar styles now replaced by cards */
+.skills .progress,
+.skills .progress-bar-wrap,
+.skills .progress-bar,
+.skills .skills-content,
+.skills .skills-animation,
+.skills .soft-bar-wrap,
+.skills .soft-bar,
+.skills .soft-skill-title {
+  display: none;
+}
+
+.skills .row.gy-4 {
+  padding: 1rem 0;
+}
+
+/* Project cards - consistent height, text clamping, no overflow */
+.project-card {
+  min-height: 320px;
+  max-height: 380px;
+  height: 350px;
+}
+
+.project-card .card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-card .bg-dark {
+  max-height: 65%;
+  overflow: hidden;
+}
+
+.project-card .card-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* GitHub social link hover colour */
+.header .social-links a.github:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* Resume download buttons */
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.resume-link:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
